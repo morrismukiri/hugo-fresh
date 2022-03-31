@@ -7,7 +7,7 @@ Cards and Card content styles
 // Feature Card
 .feature-card {
     width: 300px;
-    height: 320px;
+    height: 430px;
     background-color: #fff;
     border-radius: 3px;
     margin: 0 auto;
@@ -29,7 +29,7 @@ Cards and Card content styles
         }
     }
     .card-action {
-        margin-top: 10px;
+        margin-top: 30px;
     }
     &.is-bordered {
         border: 1px solid $fade-grey;
