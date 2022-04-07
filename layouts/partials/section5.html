@@ -1,4 +1,4 @@
-<section class="section section-light-grey is-medium">
+<section class="section section-light-grey is-medium" id="contact">
   <div class="container">
     <div class="title-wrapper has-text-centered">
       <h2 class="title is-2 is-spaced">Drop us a line or two </h2>
@@ -9,19 +9,25 @@
     <div class="content-wrapper">
       <div class="columns">
         <div class="column is-6 is-offset-3">
-          <form>
-            <div class="columns is-multiline">
+          <form action="{{ .Site.Params.zohoFormUrl }}" name='form' id='form' method='POST' accept-charset='UTF-8' enctype='multipart/form-data'>
+          <div class="columns is-multiline">
               <div class="column is-6">
-                <input class="input is-medium" type="text" placeholder="Enter your name">
+                <input type="text" maxlength="255" name="Name_First" fieldType=7 class="input is-medium" type="text" placeholder="Enter your first name">
               </div>
               <div class="column is-6">
-                <input class="input is-medium" type="email" placeholder="Enter your email address">
+                <input type="text" maxlength="255" name="Name_Last" fieldType=7 class="input is-medium" type="text" placeholder="Enter your last name">
+              </div>
+              <div class="column is-6">
+                <input maxlength="255" name="Email" value="" fieldType=9 class="input is-medium" type="email" placeholder="Enter your email address">
+              </div>
+              <div class="column is-6">
+                <input compname="PhoneNumber" name="PhoneNumber_countrycode" phoneFormat="1" isCountryCodeEnabled=false maxlength="20" value="" fieldType=11 id="international_PhoneNumber_countrycode" class="input is-medium" type="tel" placeholder="Enter your Phone number">
               </div>
               <div class="column is-12">
-                <textarea class="textarea" rows="10" placeholder="Write someting..."></textarea>
+                <textarea name="MultiLine"  class="textarea" rows="10" placeholder="Write someting..."></textarea>
               </div>
               <div class="form-footer has-text-centered mt-10">
-                <button class="button cta is-large primary-btn raised is-clear">Send Message</button>
+                <button class="button cta is-large primary-btn raised is-clear" type="submit">Send Message</button>
               </div>
             </div>
           </form>
